@@ -1,41 +1,50 @@
 :root {
-  --primary: #4cc9f0;
-  --background: #0d1117;
-  --surface: #1a1a1a;
-  --text: #e0e0e0;
+  --foreground: #ffffff;
+  --background: #000000;
+  --surface: #111111;
+  --border: #333333;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--text);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.08), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(255, 255, 255, 0.05), transparent 40%),
+    var(--background);
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  color: #fff;
-  background: var(--surface);
-  border-bottom: 1px solid #333;
+  text-align: center;
+  padding: 5rem 1rem 2rem;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+header p {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  color: #888888;
 }
 
 main {
   flex: 1;
-  padding: 2rem;
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
-  width: 100%;
+  padding: 2rem 1rem 4rem;
 }
 
 h2 {
@@ -45,50 +54,53 @@ h2 {
 #certificate-form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 1rem;
   margin-bottom: 2rem;
 }
 
 #certificate-form input {
-  flex: 1 1 300px;
-  padding: 0.5rem 1rem;
-  border: 1px solid #333;
+  flex: 1 1 280px;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--surface);
-  color: var(--text);
+  color: var(--foreground);
 }
 
 #certificate-form button {
-  padding: 0.5rem 1.5rem;
-  background: var(--primary);
-  color: #000;
-  border: none;
+  padding: 0.75rem 1.5rem;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #eaeaea;
   border-radius: 8px;
+  font-weight: 600;
   cursor: pointer;
-  transition: opacity 0.3s;
+  transition: background 0.3s;
 }
 
 #certificate-form button:hover {
-  opacity: 0.85;
+  background: #eaeaea;
 }
 
 #certificate-list {
   list-style: none;
+  padding: 0;
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 #certificate-list li {
   background: var(--surface);
   padding: 1rem;
   border-radius: 8px;
-  border: 1px solid #333;
+  border: 1px solid var(--border);
 }
 
 #certificate-list a {
   text-decoration: none;
-  color: var(--primary);
-  font-weight: bold;
+  color: var(--foreground);
+  font-weight: 500;
 }
 
