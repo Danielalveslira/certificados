@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Meus Certificados</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Meus Certificados</h1>
+  </header>
+
+  <main>
+    <section id="form-section">
+      <h2>Adicionar certificado</h2>
+      <form id="certificate-form">
+        <input type="text" id="cert-name" placeholder="Nome do certificado" required />
+        <input type="url" id="cert-url" placeholder="URL do certificado" required />
+        <button type="submit">Adicionar</button>
+      </form>
+    </section>
+
+    <section id="list-section">
+      <h2>Lista de certificados</h2>
+      <ul id="certificate-list"></ul>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
