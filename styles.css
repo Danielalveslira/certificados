@@ -92,22 +92,3 @@ h2 {
   font-weight: bold;
 }
 
-#auth-area {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-#sign-out {
-  padding: 0.4rem 1rem;
-  background: var(--primary);
-  color: #000;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: opacity 0.3s;
-}
-
-#sign-out:hover {
-  opacity: 0.85;
-}

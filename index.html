@@ -5,27 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Meus Certificados</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="https://accounts.google.com/gsi/client" async defer></script>
-  <script src="https://apis.google.com/js/api.js" async defer></script>
 </head>
 <body>
   <header>
     <h1>Meus Certificados</h1>
-    <div id="auth-area">
-      <div id="g_id_onload"
-           data-client_id="YOUR_GOOGLE_CLIENT_ID"
-           data-callback="handleCredentialResponse"></div>
-      <div class="g_id_signin" data-type="standard" data-size="medium"></div>
-      <button id="sign-out" hidden>Sair</button>
-    </div>
   </header>
 
   <main>
-    <section id="login-prompt" hidden>
-      <p>Entre com sua conta Google para gerenciar seus certificados.</p>
-    </section>
-
-    <section id="form-section" hidden>
+    <section id="form-section">
       <h2>Adicionar certificado</h2>
       <form id="certificate-form">
         <input type="text" id="cert-name" placeholder="Nome do certificado" required />
@@ -34,7 +21,7 @@
       </form>
     </section>
 
-    <section id="list-section" hidden>
+    <section id="list-section">
       <h2>Lista de certificados</h2>
       <ul id="certificate-list"></ul>
     </section>
