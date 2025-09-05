@@ -1,19 +1,19 @@
 :root {
-  --primary: #4a148c;
-  --secondary: #7c4dff;
-  --background: #f3e5f5;
-  --text: #212121;
+  --primary: #4cc9f0;
+  --background: #0d1117;
+  --surface: #1a1a1a;
+  --text: #e0e0e0;
 }
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
-  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  background: var(--background);
   color: var(--text);
   min-height: 100vh;
   display: flex;
@@ -21,18 +21,19 @@ body {
 }
 
 header {
-  text-align: center;
-  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
   color: #fff;
+  background: var(--surface);
+  border-bottom: 1px solid #333;
 }
 
 main {
-  background: var(--background);
   flex: 1;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
   padding: 2rem;
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   width: 100%;
 }
@@ -51,22 +52,24 @@ h2 {
 #certificate-form input {
   flex: 1 1 300px;
   padding: 0.5rem 1rem;
-  border: 2px solid var(--primary);
+  border: 1px solid #333;
   border-radius: 8px;
+  background: var(--surface);
+  color: var(--text);
 }
 
 #certificate-form button {
   padding: 0.5rem 1.5rem;
   background: var(--primary);
-  color: #fff;
+  color: #000;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: opacity 0.3s;
 }
 
 #certificate-form button:hover {
-  background: var(--secondary);
+  opacity: 0.85;
 }
 
 #certificate-list {
@@ -77,14 +80,34 @@ h2 {
 }
 
 #certificate-list li {
-  background: #fff;
+  background: var(--surface);
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 1px solid #333;
 }
 
 #certificate-list a {
   text-decoration: none;
   color: var(--primary);
   font-weight: bold;
+}
+
+#auth-area {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#sign-out {
+  padding: 0.4rem 1rem;
+  background: var(--primary);
+  color: #000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+#sign-out:hover {
+  opacity: 0.85;
 }
